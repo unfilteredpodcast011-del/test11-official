@@ -2,26 +2,63 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Privacy Policy — Test 11</title>
+  <title>Test 11 – UPSC & TNPSC Timed Practice Exam App</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Privacy Policy for the Test 11 mobile application and website.">
+  <meta name="description" content="Test 11 – UPSC & TNPSC Timed Practice Exam App: Official Privacy Policy detailing candidate data protection, Razorpay security, and user data rights.">
+  <meta property="og:title" content="Test 11 – UPSC & TNPSC Timed Practice Exam App">
+  <meta property="og:description" content="Test 11 – UPSC & TNPSC Timed Practice Exam App: Official Privacy Policy detailing candidate data protection, Razorpay security, and user data rights.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://unfilteredpodcast011-del.github.io/test11-official/privacy-policy.html">
+  <meta property="og:image" content="logo.jpg">
   <link rel="icon" type="image/jpeg" href="logo.jpg">
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
     body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
   </style>
 </head>
 <body class="bg-gray-50 text-gray-900 antialiased flex flex-col min-h-screen">
 
-  <!-- Header -->
-  <header class="bg-white border-b border-gray-200">
-    <div class="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between">
-      <a href="index.html" class="flex items-center gap-2">
-        <img src="logo.jpg" alt="Logo" class="w-8 h-8 rounded border border-gray-200 object-cover">
-        <span class="font-bold text-base text-gray-900">Test 11</span>
+  <!-- ================= TOP NAVIGATION BAR ================= -->
+  <header class="bg-white border-b border-gray-200 sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="logo.jpg" alt="Test 11 Logo" class="w-9 h-9 rounded-lg border border-gray-200 object-cover shadow-sm">
+        <span class="font-bold text-lg text-gray-900 tracking-tight">Test 11</span>
       </a>
-      <a href="index.html" class="text-xs text-gray-600 hover:text-black">← Back to Home</a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-gray-600">
+        <a href="about.html" class="hover:text-black transition">About</a>
+        <a href="index.html#features" class="hover:text-black transition">Features</a>
+        <a href="index.html#pricing" class="hover:text-black transition">Pricing</a>
+        <a href="index.html#how-it-works" class="hover:text-black transition">How It Works</a>
+        <a href="index.html#payments" class="hover:text-black transition">Payments</a>
+        <a href="contact.html" class="hover:text-black transition">Contact</a>
+      </nav>
+
+      <div class="hidden md:flex items-center gap-3">
+        <a href="index.html#download" class="px-4 py-2 bg-black hover:bg-gray-800 text-white text-xs font-semibold rounded-lg transition shadow-sm">
+          Download APK
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button onclick="toggleMobileMenu()" class="md:hidden p-2 text-gray-600 hover:text-black focus:outline-none" aria-label="Toggle Navigation Menu">
+        <i class="fa-solid fa-bars text-lg"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobileMenu" class="hidden md:hidden border-t border-gray-200 bg-white px-6 py-4 space-y-3 text-sm font-medium text-gray-700">
+      <a href="about.html" class="block hover:text-black transition">About</a>
+      <a href="index.html#features" onclick="toggleMobileMenu()" class="block hover:text-black transition">Features</a>
+      <a href="index.html#pricing" onclick="toggleMobileMenu()" class="block hover:text-black transition">Pricing</a>
+      <a href="index.html#how-it-works" onclick="toggleMobileMenu()" class="block hover:text-black transition">How It Works</a>
+      <a href="index.html#payments" onclick="toggleMobileMenu()" class="block hover:text-black transition">Payments</a>
+      <a href="contact.html" class="block hover:text-black transition">Contact</a>
+      <a href="index.html#download" onclick="toggleMobileMenu()" class="inline-block mt-2 px-4 py-2 bg-black text-white text-xs font-semibold rounded-lg">Download APK</a>
     </div>
   </header>
 
@@ -29,7 +66,7 @@
     <div class="max-w-4xl mx-auto px-6 bg-white p-8 md:p-12 rounded-xl border border-gray-200 shadow-sm space-y-6 text-xs text-gray-700 leading-relaxed">
       
       <div>
-        <h1 class="text-2xl font-bold text-gray-900">Privacy Policy</h1>
+        <h1 class="text-2xl md:text-3xl font-extrabold text-gray-900 tracking-tight">Privacy Policy</h1>
         <p class="text-gray-500 mt-1">Last Updated: November 16, 2026</p>
       </div>
 
@@ -38,68 +75,165 @@
       <section class="space-y-2">
         <h2 class="text-sm font-bold text-gray-900 uppercase tracking-wide">1. Overview</h2>
         <p>
-          This Privacy Policy describes the policies and procedures of <b>Laven Lokesh Barani</b> ("we", "our", or "us") on the collection, use, and disclosure of your information when you use the <b>Test 11</b> mobile application ("App") or our website.
+          This Privacy Policy describes how <b>Laven Lokesh Barani</b> ("we", "our", or "us") collects, protects, uses, and handles candidate information through the <b>Test 11</b> mobile application ("App") and website.
         </p>
       </section>
 
       <section class="space-y-2">
         <h2 class="text-sm font-bold text-gray-900 uppercase tracking-wide">2. Information We Collect</h2>
-        <p>We collect only the minimal information necessary to deliver and evaluate your test simulations:</p>
+        <p>We collect only the minimum data required to facilitate timed mock tests and diagnostic performance tracking:</p>
+        <ul class="list-disc pl-5 space-y-1.5">
+          <li><b>Profile Data:</b> Candidate Name, Email Address, and Contact Phone Number (collected during registration to personalize your scorecards).</li>
+          <li><b>Academic Preparation Preferences:</b> Chosen target exam stream (UPSC Civil Services or TNPSC) and selected interface language (English, Tamil, or Hindi).</li>
+          <li><b>Test & Performance Results:</b> Question attempts, answers marked, timer values, overall scores, and PDF diagnostic scorecards.</li>
+          <li><b>Payment Transaction Identifiers:</b> Razorpay Order ID, Razorpay Payment ID, payment timestamp, and transaction status (Success, Failed, Refunded).</li>
+        </ul>
+        <div class="p-3 bg-amber-50 border border-amber-200 rounded-lg text-amber-900 font-semibold">
+          <i class="fa-solid fa-lock mr-1"></i> Card & Banking Security: Test 11 NEVER collects, processes, or stores your debit/credit card numbers, CVV codes, netbanking passwords, or UPI PINs. All financial transactions are handled directly through Razorpay's PCI-DSS compliant payment gateway.
+        </div>
+      </section>
+
+      <section class="space-y-2">
+        <h2 class="text-sm font-bold text-gray-900 uppercase tracking-wide">3. How We Use Collected Data</h2>
+        <p>The information we collect is strictly used to:</p>
         <ul class="list-disc pl-5 space-y-1">
-          <li><b>Account Information:</b> Full Name, Email Address, Contact Phone Number, and District (provided during student profile registration).</li>
-          <li><b>Academic Preparation Details:</b> Target exam selected (UPSC or TNPSC), preferred language preference (English, Tamil, or Hindi), and years of preparation.</li>
-          <li><b>Test & Performance Data:</b> Questions attempted, answers selected, time taken per question, scorecards, and diagnostic report history.</li>
-          <li><b>Payment Transaction Records:</b> Order ID, Payment ID, amount paid (₹1), timestamp, and payment status (Success, Failed, Cancelled) generated by Razorpay. <i>Note: We DO NOT collect, store, or have access to your credit/debit card numbers, CVVs, UPI PINs, or net banking passwords.</i></li>
+          <li>Authenticate your profile and unlock tests purchased via ₹1 Razorpay payments.</li>
+          <li>Evaluate test answers, apply negative marking rules, and generate performance analytics.</li>
+          <li>Compile downloadable official PDF diagnostic reports.</li>
+          <li>Maintain candidate test attempt history and streak statistics.</li>
+          <li>Deliver support assistance and investigate transaction queries.</li>
         </ul>
       </section>
 
       <section class="space-y-2">
-        <h2 class="text-sm font-bold text-gray-900 uppercase tracking-wide">3. How We Use Your Information</h2>
-        <p>The collected information is used solely to:</p>
-        <ul class="list-disc pl-5 space-y-1">
-          <li>Provide authentic timed test evaluations and calculate correct/incorrect answers.</li>
-          <li>Generate downloadable PDF performance scorecards with candidate details.</li>
-          <li>Maintain the accuracy of competitive leaderboards and streak statistics.</li>
-          <li>Maintain your payment and transaction audit records for unlocked tests.</li>
-          <li>Respond to user support inquiries and resolve technical issues.</li>
-        </ul>
-      </section>
-
-      <section class="space-y-2">
-        <h2 class="text-sm font-bold text-gray-900 uppercase tracking-wide">4. Third-Party Service Providers</h2>
-        <p>We engage trusted third-party services that process data in compliance with strict privacy standards:</p>
-        <ul class="list-disc pl-5 space-y-1">
-          <li><b>Razorpay:</b> Payment gateway facilitating secure transactions. Razorpay processes your payment information subject to their own Privacy Policy.</li>
-          <li><b>Supabase:</b> Secure cloud database hosting user profiles, questions, and test scores.</li>
-        </ul>
-      </section>
-
-      <section class="space-y-2">
-        <h2 class="text-sm font-bold text-gray-900 uppercase tracking-wide">5. Data Retention & Security</h2>
+        <h2 class="text-sm font-bold text-gray-900 uppercase tracking-wide">4. Data Deletion Rights</h2>
         <p>
-          We retain your information for as long as your account is active or needed to provide services. We implement industry-standard organizational and technical measures to protect candidate records against unauthorized access.
+          Candidates have the right to request the complete deletion of their account, personal profile, and test performance history at any time.
+        </p>
+        <p>
+          To request data deletion, send an email to <b>plantgreeninertiamanagement@gmail.com</b> from your registered email address with the subject "Data Deletion Request". All associated profile records and attempt histories will be permanently purged within <b>7 working days</b>.
         </p>
       </section>
 
       <section class="space-y-2">
-        <h2 class="text-sm font-bold text-gray-900 uppercase tracking-wide">6. Contact Information</h2>
+        <h2 class="text-sm font-bold text-gray-900 uppercase tracking-wide">5. Third-Party Service Providers</h2>
         <p>
-          If you have questions or complaints regarding this Privacy Policy, please contact our grievance officer at:
+          We rely on trusted third parties strictly to support core app functionality:
         </p>
-        <div class="p-3 bg-gray-50 border border-gray-200 rounded text-gray-800">
-          <b>Support Contact:</b> plantgreeninertiamanagement@gmail.com<br>
-          <b>Entity:</b> Laven Lokesh Barani<br>
-          <b>Location:</b> No. 5/94, Alapakkam Main Road, Subramaniapuram, Chozhan Nagar, Maduravoyal, Chennai, Tamil Nadu - 600095, India
+        <ul class="list-disc pl-5 space-y-1">
+          <li><b>Razorpay:</b> Secure payment gateway facilitating ₹1 in-app test unlock transactions.</li>
+          <li><b>Supabase:</b> Secure database infrastructure hosting test questions, scores, and support inquiries.</li>
+        </ul>
+      </section>
+
+      <section class="space-y-2">
+        <h2 class="text-sm font-bold text-gray-900 uppercase tracking-wide">6. Shipping & Delivery Policy</h2>
+        <div class="p-3 bg-blue-50 border border-blue-200 rounded-lg text-blue-900">
+          <strong>Digital Service:</strong> Test access is unlocked instantly after successful payment. No physical shipping.
+        </div>
+      </section>
+
+      <section class="space-y-2">
+        <h2 class="text-sm font-bold text-gray-900 uppercase tracking-wide">7. Contact Information</h2>
+        <div class="p-4 bg-gray-50 border border-gray-200 rounded-lg space-y-1 text-gray-800">
+          <div><b>Data Privacy Desk:</b> Laven Lokesh Barani (Test 11 Prep)</div>
+          <div><b>Support Email:</b> plantgreeninertiamanagement@gmail.com</div>
+          <div><b>Helpline:</b> +91 9345029705</div>
+          <div><b>Registered Address:</b> No. 5/94, Alapakkam Main Road, Subramaniapuram, Chozhan Nagar, Maduravoyal, Chennai, Tamil Nadu - 600095, India</div>
         </div>
       </section>
 
     </div>
   </main>
 
-  <footer class="bg-white border-t border-gray-200 py-6 text-center text-xs text-gray-500">
-    © 2026 Laven Lokesh Barani. All rights reserved.
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-white border-t border-gray-200 py-10 text-xs text-gray-600">
+    <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+      
+      <!-- Col 1: About Brand -->
+      <div class="space-y-3">
+        <div class="flex items-center gap-2">
+          <img src="logo.jpg" alt="Test 11" class="w-7 h-7 rounded object-cover border border-gray-200">
+          <span class="font-bold text-sm text-gray-900">Test 11</span>
+        </div>
+        <p class="text-[11px] text-gray-500 leading-relaxed">
+          The timed exam simulation platform for UPSC and TNPSC civil service aspirants across India.
+        </p>
+        <p class="text-[11px] text-gray-400">
+          Developed & Maintained by:<br>
+          <strong class="text-gray-700">Laven Lokesh Barani</strong>
+        </p>
+      </div>
+
+      <!-- Col 2: Navigation Links -->
+      <div>
+        <h4 class="font-bold text-gray-900 mb-3 text-xs uppercase tracking-wider">Quick Navigation</h4>
+        <ul class="space-y-2 text-[11px]">
+          <li><a href="about.html" class="hover:text-black transition">About Test 11</a></li>
+          <li><a href="index.html#features" class="hover:text-black transition">App Features</a></li>
+          <li><a href="index.html#pricing" class="hover:text-black transition">Test Pricing (₹1)</a></li>
+          <li><a href="index.html#how-it-works" class="hover:text-black transition">How It Works</a></li>
+          <li><a href="index.html#payments" class="hover:text-black transition">Payment Information</a></li>
+          <li><a href="index.html#download" class="hover:text-black transition">Download APK</a></li>
+          <li><a href="contact.html" class="hover:text-black transition">Help & Support</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Compliance & Legal -->
+      <div>
+        <h4 class="font-bold text-gray-900 mb-3 text-xs uppercase tracking-wider">Legal & Compliance</h4>
+        <ul class="space-y-2 text-[11px]">
+          <li><a href="privacy-policy.html" class="hover:text-black transition font-semibold text-gray-900">Privacy Policy</a></li>
+          <li><a href="terms-conditions.html" class="hover:text-black transition">Terms & Conditions</a></li>
+          <li><a href="refund-policy.html" class="hover:text-black transition">Refund & Cancellation Policy</a></li>
+          <li><a href="contact.html" class="hover:text-black transition">Contact & Grievance</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 4: Contact Information -->
+      <div>
+        <h4 class="font-bold text-gray-900 mb-3 text-xs uppercase tracking-wider">Support Desk</h4>
+        <p class="text-[11px] text-gray-500 mb-2">Have questions about test evaluation or payments?</p>
+        <div class="space-y-1.5 text-[11px]">
+          <div class="flex items-center gap-1.5">
+            <i class="fa-regular fa-envelope text-gray-400"></i>
+            <span>plantgreeninertiamanagement@gmail.com</span>
+          </div>
+          <div class="flex items-center gap-1.5">
+            <i class="fa-solid fa-phone text-gray-400"></i>
+            <span>+91 9345029705</span>
+          </div>
+          <div class="flex items-start gap-1.5">
+            <i class="fa-solid fa-location-dot text-gray-400 mt-0.5"></i>
+            <span>No. 5/94, Alapakkam Main Road, Subramaniapuram, Chozhan Nagar, Maduravoyal, Chennai, Tamil Nadu - 600095, India</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Government Disclaimer Banner -->
+    <div class="max-w-6xl mx-auto px-6 mt-8 pt-6 border-t border-gray-200">
+      <div class="p-3 bg-gray-50 border border-gray-200 rounded-lg text-[11px] text-gray-500 text-center">
+        <strong>Disclaimer:</strong> Test 11 is an independent practice platform and is not affiliated with, endorsed by, or connected to UPSC, TNPSC, or any government body.
+      </div>
+      <div class="mt-4 flex flex-wrap justify-between items-center text-[11px] text-gray-400 gap-2">
+        <div>
+          © 2026 Laven Lokesh Barani. All rights reserved.
+        </div>
+        <div>
+          Payment Gateway Powered by Razorpay.
+        </div>
+      </div>
+    </div>
   </footer>
+
+  <script>
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('hidden');
+    }
+  </script>
 
 </body>
 </html>
-
