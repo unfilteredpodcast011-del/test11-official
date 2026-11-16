@@ -7,6 +7,7 @@
   <meta name="description" content="Contact support desk for Test 11 mobile application inquiries and payment support.">
   <link rel="icon" type="image/jpeg" href="logo.jpg">
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
@@ -80,7 +81,12 @@
               </div>
               <div>
                 <div class="font-bold text-gray-900">Registered Office / Address</div>
-                <div class="text-gray-600 mt-0.5">Ranipet District, Tamil Nadu - 632401, India</div>
+                <div class="text-gray-600 mt-0.5">
+                  No. 5/94, Alapakkam Main Road, Subramaniapuram, Chozhan Nagar, Maduravoyal, Chennai, Tamil Nadu - 600095, India<br>
+                  <a href="https://maps.app.goo.gl/R8S5HTGHxD5Fu3KJA" target="_blank" rel="noopener" class="text-blue-600 hover:text-black font-semibold inline-flex items-center gap-1 mt-1">
+                    <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i> View on Google Maps
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -132,10 +138,47 @@
   </footer>
 
   <script>
-    function handleContactSubmit(e) {
+    const SUPABASE_URL = 'https://jkbndifpcepnsjgmyrfr.supabase.co';
+    const SUPABASE_ANON = 'sb_publishable_tjoAjn0nSkhIIXYrRpB7Lw_8YPdMPxi';
+    const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON);
+
+    async function handleContactSubmit(e) {
       e.preventDefault();
-      document.getElementById('contactFeedback').classList.remove('hidden');
-      e.target.reset();
+      const name = document.getElementById('contactName').value.trim();
+      const email = document.getElementById('contactEmail').value.trim();
+      const orderId = document.getElementById('contactOrderId').value.trim();
+      const message = document.getElementById('contactMessage').value.trim();
+      const feedback = document.getElementById('contactFeedback');
+
+      feedback.classList.add('hidden');
+      const submitBtn = e.target.querySelector('button[type="submit"]');
+      const origText = submitBtn.textContent;
+      submitBtn.textContent = 'Submitting...';
+      submitBtn.disabled = true;
+
+      try {
+        const orderSummary = `INQUIRY: ${name} (${email}) ${orderId ? '[Order: ' + orderId + ']' : ''} - ${message}`;
+
+        await supabaseClient.from('payments').insert({
+          student_id: '8294c73f-be46-4f65-939c-9eaebe11273f',
+          razorpay_order_id: orderSummary,
+          razorpay_payment_id: 'contact_form_inquiry',
+          amount_paise: 0,
+          status: 'support_inquiry'
+        });
+
+        feedback.className = 'p-3 rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-semibold';
+        feedback.innerHTML = '<i class="fa-solid fa-check-circle mr-1"></i> Message dispatched successfully! Our administrator team has been notified and will respond to ' + email + ' promptly.';
+        feedback.classList.remove('hidden');
+        e.target.reset();
+      } catch (err) {
+        feedback.className = 'p-3 rounded-lg bg-red-50 border border-red-200 text-red-700 text-xs font-semibold';
+        feedback.textContent = 'Submission error: ' + err.message;
+        feedback.classList.remove('hidden');
+      } finally {
+        submitBtn.textContent = origText;
+        submitBtn.disabled = false;
+      }
     }
   </script>
 
